@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-background text-text-main;
+  }
+}
+
+@layer components {
+  /* Reusable Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-[0.95rem] font-medium rounded-lg cursor-pointer transition-all duration-300 gap-2 border-none;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white shadow-primary hover:bg-primary-hover hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  
+  .btn-emergency {
+    @apply bg-emergency text-white shadow-emergency hover:bg-emergency-hover hover:-translate-y-0.5 hover:shadow-lg;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent text-primary hover:bg-primary/5;
+  }
+}
